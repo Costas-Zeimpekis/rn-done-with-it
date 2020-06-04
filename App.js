@@ -2,29 +2,18 @@ import React from "react";
 import {
   StyleSheet,
   SafeAreaView,
-  TouchableHighlight,
-  Button,
-  Image,
-  View
+  Platform,
+  StatusBar,
+  View,
+  Button
 } from "react-native";
 
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+
+import { useDeviceOrientation } from "@react-native-community/hooks";
+
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <View style={{ marginBottom: 15 }}>
-        <TouchableHighlight onPress={() => console.log("Press Image")}>
-          <Image
-            source={{
-              width: 200,
-              height: 300,
-              uri: "https://picsum.photos/200/300"
-            }}
-          />
-        </TouchableHighlight>
-      </View>
-      <Button color="orange" onPress={() => alert("Hello")} title="Click Me" />
-    </SafeAreaView>
-  );
+  return <WelcomeScreen />;
 }
 
 const styles = StyleSheet.create({
@@ -32,6 +21,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
   }
 });
