@@ -2,7 +2,11 @@
   "expo": {
     "name": "rn-done-with-it",
     "slug": "rn-done-with-it",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -14,10 +18,13 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
-    "description": "React Native app of KissMyButton"
+    "description": "React Native app of KissMyButton",
+    "githubUrl": "https://github.com/Costas-Zeimpekis/rn-done-with-it.git"
   }
 }
